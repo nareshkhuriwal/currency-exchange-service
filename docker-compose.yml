@@ -3,7 +3,7 @@ services:
   currency-exchange-service:
     image: currency-exchange-service:latest
     ports:
-      - "8000:8000"
+      - "5001:5001"
     networks:
       - opallios-microservice-net
     deploy:
