@@ -1,0 +1,19 @@
+version: "3"
+services:
+  currency-exchange-service:
+    image: currency-exchange-service:latest
+    ports:
+      - "8000:8000"
+    networks:
+      - opallios-microservice-net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 64M
+
+networks:
+  opallios-microservice-net:
